@@ -1,5 +1,4 @@
-# ChatterBox
-Advanced Minecraft chat plugin with channels, moderation, and formatting
+
 # ChatterBox
 
 An advanced Minecraft chat plugin with channels, moderation, and formatting features for Minecraft 1.21+
@@ -70,7 +69,7 @@ An advanced Minecraft chat plugin with channels, moderation, and formatting feat
 2. Place `ChatterBox.jar` in your `plugins/` folder
 3. Restart your server
 4. Configure the plugin in `plugins/ChatterBox/config.yml`
-5. Optional: Install [Vault](https://www.spigotmc.org/resources/vault.34315/) for prefix/suffix support
+5. Install [Vault](https://www.spigotmc.org/resources/vault.34315/) for prefix/suffix support
 
 ## ⚙️ Configuration
 
@@ -85,29 +84,12 @@ The plugin creates a comprehensive `config.yml` file with the following sections
 - **Integrations** - Vault, PlaceholderAPI, Discord
 - **Advanced** - RGB colors, logging, debug options
 
-## 🏗️ Building from Source
-
-### Requirements
-- Java 21+
-- Maven 3.6+
-- Minecraft 1.21 development environment
-
-### Build Steps
-```bash
-git clone https://github.com/yourusername/chatterbox-plugin.git
-cd chatterbox-plugin
-mvn clean package
-```
-
-The compiled JAR will be in `target/ChatterBox-0.0.1.jar`
-
 ## 🔌 Dependencies
 
 ### Required
 - Minecraft 1.21+
 - Java 21+
 
-### Optional
 - [Vault](https://www.spigotmc.org/resources/vault.34315/) - For prefix/suffix support
 - [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) - For placeholder support
 
@@ -146,7 +128,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Discord**: *Add your Discord server*
+- **Discord**: *[Discord](https://discord.gg/7H4r8SS8EZ)*
 - **Issues**: [GitHub Issues](../../issues)
 - **Wiki**: [Plugin Wiki](../../wiki)
 
@@ -160,4 +142,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Version**: 0.0.1  
 **Minecraft**: 1.21+  
-**Author**: darumba
+**Author**: Darumba
