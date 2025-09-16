@@ -1,0 +1,129 @@
+# ChatterBox Configuration v0.0.1
+# Advanced chat plugin with channels, moderation, and formatting
+
+chat:
+  # Default chat format (used if channel doesn't have custom format)
+  format: "&7[&b{channel}&7] &r{prefix}{player}&r{suffix}&7: &r{message}"
+
+  # Default channel for new players
+  default-channel: "global"
+
+  # Maximum message length (characters)
+  max-message-length: 256
+
+  # Chat cooldown in seconds (0 to disable)
+  cooldown: 1
+
+  # Anti-spam settings
+  anti-spam:
+    enabled: true
+    max-same-messages: 3
+
+  # Word filter settings
+  filter:
+    enabled: true
+    words:
+      - "badword1"
+      - "badword2"
+      - "spam"
+    # Replace filtered words with stars (true) or block message (false)
+    replace-with-stars: true
+
+# Channel configurations
+channels:
+  global:
+    format: "&7[&bGlobal&7] &r{prefix}&f{player}&r{suffix}&7: &r{message}"
+    permission: ""  # Empty = no permission required
+
+  local:
+    format: "&7[&aLocal&7] &r{prefix}&f{player}&r{suffix}&7: &r{message}"
+    permission: ""
+    range: 100  # Range in blocks for local chat
+
+  admin:
+    format: "&7[&c&lADMIN&7] &r{prefix}&f{player}&r{suffix}&7: &r{message}"
+    permission: "chatterbox.admin"
+
+  staff:
+    format: "&7[&9Staff&7] &r{prefix}&f{player}&r{suffix}&7: &r{message}"
+    permission: "chatterbox.staff"
+
+# Private message settings
+private-messages:
+  format:
+    sender: "&7[&eYou &7-> &e{recipient}&7] &f{message}"
+    recipient: "&7[&e{sender} &7-> &eYou&7] &f{message}"
+
+  # Sound to play when receiving a message
+  sound:
+    enabled: true
+    sound: "BLOCK_NOTE_BLOCK_PLING"
+    volume: 0.5
+    pitch: 1.0
+
+# Moderation settings
+moderation:
+  # Automatically save mute data every X minutes
+  auto-save-interval: 5
+
+  # Mute format messages
+  messages:
+    muted: "&cYou are currently muted! Reason: &f{reason}"
+    mute-expired: "&aYour mute has expired! You can chat again."
+
+  # Default mute durations (for quick mute commands)
+  default-durations:
+    temp: "1h"     # /tempmute
+    warning: "10m" # /mutewarning
+
+# Integration settings
+integrations:
+  # Vault integration for prefixes/suffixes
+  vault:
+    enabled: true
+    use-prefixes: true
+    use-suffixes: true
+
+  # PlaceholderAPI integration
+  placeholderapi:
+    enabled: true
+
+  # Discord integration (if available)
+  discord:
+    enabled: false
+    webhook-url: ""
+    send-to-discord: false
+    format: "**{player}**: {message}"
+
+# Advanced settings
+advanced:
+  # Use RGB color codes (1.16+)
+  rgb-colors: true
+
+  # Log all chat messages to file
+  log-chat: true
+
+  # Chat history length per player
+  chat-history: 50
+
+  # Enable tab completion for player names in chat
+  tab-complete-players: true
+
+  # Maximum channels a player can access
+  max-channels-per-player: 10
+
+# Database settings (future feature)
+database:
+  type: "file"  # file, mysql, sqlite
+  # MySQL settings (if type is mysql)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "chatterbox"
+    username: "user"
+    password: "pass"
+
+# Debug settings
+debug:
+  enabled: false
+  log-level: "INFO"  # DEBUG, INFO, WARN, ERROR
